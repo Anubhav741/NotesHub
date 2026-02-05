@@ -59,8 +59,8 @@ export default function Index() {
             {/* Hero Image */}
             <div className="relative h-96 hidden md:flex items-center justify-center">
               <img
-                src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Students studying"
+                src="https://images.pexels.com/photos/3059654/pexels-photo-3059654.jpeg"
+                alt="Student studying with books at desk"
                 className="rounded-lg shadow-lg w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-lg"></div>
