@@ -378,8 +378,8 @@ export default function Index() {
             {/* Right Image and How It Works */}
             <div>
               <img
-                src="https://images.pexels.com/photos/5632400/pexels-photo-5632400.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Upload notes"
+                src="https://images.pexels.com/photos/7516391/pexels-photo-7516391.jpeg"
+                alt="Student taking notes"
                 className="rounded-lg shadow-lg mb-8 w-full h-64 object-cover"
               />
 
