@@ -52,7 +52,7 @@ export default function Header() {
               <Search size={18} className="text-muted-foreground" />
               <input
                 type="text"
-                placeholder={language === "en" ? "Search notes..." : "नोट्स खोजें..."}
+                placeholder={t("header.searchPlaceholder")}
                 className="bg-transparent outline-none text-sm text-foreground placeholder-muted-foreground w-32"
               />
             </div>
