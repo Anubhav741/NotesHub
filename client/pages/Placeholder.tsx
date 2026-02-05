@@ -1,10 +1,12 @@
 import { useParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/hooks/useLanguage";
 import { ArrowRight } from "lucide-react";
 
 const Placeholder = () => {
   const { page } = useParams();
+  const { t } = useLanguage();
 
   const pageContent: Record<string, { title: string; description: string }> = {
     dashboard: {
@@ -42,14 +44,14 @@ const Placeholder = () => {
   };
 
   const content = pageContent[page || "dashboard"] || {
-    title: "Feature Coming Soon",
-    description: "This page is coming soon. Keep learning with our existing features!"
+    title: t("placeholder.featureComingSoon"),
+    description: t("placeholder.inDevelopment")
   };
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
-      
+
       <div className="flex-1 flex items-center justify-center px-4 py-20">
         <div className="max-w-2xl w-full text-center">
           <div className="mb-8">
@@ -62,10 +64,10 @@ const Placeholder = () => {
 
           <div className="bg-card rounded-lg border border-border p-8 mb-8">
             <p className="text-muted-foreground mb-6">
-              This feature is currently in development. We're working hard to bring you an amazing experience!
+              {t("placeholder.inDevelopment")}
             </p>
             <p className="text-sm text-muted-foreground mb-6">
-              In the meantime, you can explore other features or return to the homepage to get started with your studies.
+              {t("placeholder.explore")}
             </p>
           </div>
 
@@ -74,23 +76,23 @@ const Placeholder = () => {
               href="/"
               className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-colors"
             >
-              Back to Home
+              {t("placeholder.backHome")}
               <ArrowRight size={20} />
             </a>
             <a
               href="/#features"
               className="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-3 rounded-lg transition-colors"
             >
-              Explore Features
+              {t("placeholder.exploreFeatures")}
             </a>
           </div>
 
           <div className="mt-12 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground mb-4">
-              Want this feature sooner? Let us know your feedback!
+              {t("placeholder.feedback")}
             </p>
             <button className="text-primary hover:text-primary/80 font-semibold transition-colors">
-              Send Feedback →
+              {t("placeholder.sendFeedback")}
             </button>
           </div>
         </div>
