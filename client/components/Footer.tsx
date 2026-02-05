@@ -1,6 +1,9 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-foreground text-background border-t border-border mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -14,24 +17,24 @@ export default function Footer() {
               <h3 className="font-bold text-lg">NotesHub</h3>
             </div>
             <p className="text-background/80 text-sm">
-              Your all-in-one platform for organized study materials and exam preparation.
+              {t("footer.about")}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">{t("footer.quickLinks")}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#streams" className="text-background/80 hover:text-background transition-colors">Streams</a></li>
-              <li><a href="#features" className="text-background/80 hover:text-background transition-colors">Features</a></li>
-              <li><a href="#download" className="text-background/80 hover:text-background transition-colors">Download</a></li>
-              <li><a href="#help" className="text-background/80 hover:text-background transition-colors">Help Center</a></li>
+              <li><a href="#streams" className="text-background/80 hover:text-background transition-colors">{t("header.streams")}</a></li>
+              <li><a href="#features" className="text-background/80 hover:text-background transition-colors">{t("header.features")}</a></li>
+              <li><a href="#upload" className="text-background/80 hover:text-background transition-colors">{t("upload.uploadNotes")}</a></li>
+              <li><a href="#help" className="text-background/80 hover:text-background transition-colors">{t("header.help")}</a></li>
             </ul>
           </div>
 
           {/* Resources */}
           <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
+            <h4 className="font-semibold mb-4">{t("footer.resources")}</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Blog</a></li>
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Study Tips</a></li>
@@ -42,7 +45,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4">Get in Touch</h4>
+            <h4 className="font-semibold mb-4">{t("footer.getInTouch")}</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-background/80">
                 <Mail size={16} className="flex-shrink-0" />
@@ -62,10 +65,10 @@ export default function Footer() {
 
         {/* CTA Section */}
         <div className="bg-primary/20 rounded-lg p-8 mb-8 text-center">
-          <h3 className="text-xl font-bold mb-2">Start Your Learning Journey Today</h3>
-          <p className="text-background/80 mb-4">Join thousands of students preparing for JEE, NEET, and CA exams</p>
+          <h3 className="text-xl font-bold mb-2">{t("footer.startJourney")}</h3>
+          <p className="text-background/80 mb-4">{t("footer.description")}</p>
           <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-colors">
-            Get Started Free
+            {t("footer.getStartedFree")}
           </button>
         </div>
 
@@ -73,7 +76,7 @@ export default function Footer() {
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-background/80 text-sm">
-              © 2024 NotesHub. All rights reserved.
+              {t("footer.copyright")}
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="text-background/80 hover:text-background transition-colors" aria-label="Facebook">
