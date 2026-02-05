@@ -35,13 +35,13 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <a href="#streams" className="text-foreground hover:text-primary transition-colors font-medium">
-              Streams
+              {t("header.streams")}
             </a>
             <a href="#features" className="text-foreground hover:text-primary transition-colors font-medium">
-              Features
+              {t("header.features")}
             </a>
             <a href="#help" className="text-foreground hover:text-primary transition-colors font-medium">
-              Help
+              {t("header.help")}
             </a>
           </nav>
 
