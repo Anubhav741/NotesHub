@@ -29,12 +29,16 @@ const App = () => (
   </QueryClientProvider>
 );
 
-let root: ReturnType<typeof createRoot> | null = null;
+declare global {
+  interface Window {
+    __noteshub_root?: ReturnType<typeof createRoot>;
+  }
+}
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
-  if (!root) {
-    root = createRoot(rootElement);
+  if (!window.__noteshub_root) {
+    window.__noteshub_root = createRoot(rootElement);
   }
-  root.render(<App />);
+  window.__noteshub_root.render(<App />);
 }
