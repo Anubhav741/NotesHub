@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Search, Sun, Moon, Globe } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
-  const [language, setLanguage] = useState<"en" | "hi">("en");
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     if (isDark) {
