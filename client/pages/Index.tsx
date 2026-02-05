@@ -116,8 +116,8 @@ export default function Index() {
             {/* JEE Stream */}
             <div className="bg-background rounded-lg p-6 border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
               <img
-                src="https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="JEE"
+                src="https://images.pexels.com/photos/8471839/pexels-photo-8471839.jpeg"
+                alt="Science laboratory students"
                 className="w-full h-40 object-cover rounded-lg mb-4"
               />
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
