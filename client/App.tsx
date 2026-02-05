@@ -29,8 +29,12 @@ const App = () => (
   </QueryClientProvider>
 );
 
+let root: ReturnType<typeof createRoot> | null = null;
+
 const rootElement = document.getElementById("root");
 if (rootElement) {
-  const root = createRoot(rootElement);
+  if (!root) {
+    root = createRoot(rootElement);
+  }
   root.render(<App />);
 }
