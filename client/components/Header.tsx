@@ -101,25 +101,25 @@ export default function Header() {
               href="#streams"
               className="block px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors"
             >
-              Streams
+              {t("header.streams")}
             </a>
             <a
               href="#features"
               className="block px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors"
             >
-              Features
+              {t("header.features")}
             </a>
             <a
               href="#help"
               className="block px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors"
             >
-              Help
+              {t("header.help")}
             </a>
             <div className="px-4 py-2 flex items-center gap-2 bg-muted rounded-lg border border-border">
               <Search size={18} className="text-muted-foreground" />
               <input
                 type="text"
-                placeholder={language === "en" ? "Search notes..." : "नोट्स खोजें..."}
+                placeholder={t("header.searchPlaceholder")}
                 className="bg-transparent outline-none text-sm text-foreground placeholder-muted-foreground flex-1"
               />
             </div>
