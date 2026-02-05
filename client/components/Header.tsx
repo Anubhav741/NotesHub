@@ -25,7 +25,9 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center gap-2 flex-shrink-0">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">📚</span>
+              <span className="text-primary-foreground font-bold text-lg">
+                📚
+              </span>
             </div>
             <span className="font-bold text-lg text-foreground hidden sm:inline">
               NotesHub
@@ -34,13 +36,22 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#streams" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a
+              href="#streams"
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               {t("header.streams")}
             </a>
-            <a href="#features" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a
+              href="#features"
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               {t("header.features")}
             </a>
-            <a href="#help" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a
+              href="#help"
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               {t("header.help")}
             </a>
           </nav>
@@ -77,7 +88,9 @@ export default function Header() {
               aria-label="Toggle language"
             >
               <Globe size={20} className="text-foreground" />
-              <span className="text-sm font-medium text-foreground">{language.toUpperCase()}</span>
+              <span className="text-sm font-medium text-foreground">
+                {language.toUpperCase()}
+              </span>
             </button>
 
             {/* Mobile Menu Button */}

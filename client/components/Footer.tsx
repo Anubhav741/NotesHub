@@ -1,4 +1,12 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 export default function Footer() {
@@ -12,23 +20,51 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">📚</span>
+                <span className="text-primary-foreground font-bold text-lg">
+                  📚
+                </span>
               </div>
               <h3 className="font-bold text-lg">NotesHub</h3>
             </div>
-            <p className="text-background/80 text-sm">
-              {t("footer.about")}
-            </p>
+            <p className="text-background/80 text-sm">{t("footer.about")}</p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold mb-4">{t("footer.quickLinks")}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#streams" className="text-background/80 hover:text-background transition-colors">{t("header.streams")}</a></li>
-              <li><a href="#features" className="text-background/80 hover:text-background transition-colors">{t("header.features")}</a></li>
-              <li><a href="#upload" className="text-background/80 hover:text-background transition-colors">{t("upload.uploadNotes")}</a></li>
-              <li><a href="#help" className="text-background/80 hover:text-background transition-colors">{t("header.help")}</a></li>
+              <li>
+                <a
+                  href="#streams"
+                  className="text-background/80 hover:text-background transition-colors"
+                >
+                  {t("header.streams")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#features"
+                  className="text-background/80 hover:text-background transition-colors"
+                >
+                  {t("header.features")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#upload"
+                  className="text-background/80 hover:text-background transition-colors"
+                >
+                  {t("upload.uploadNotes")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#help"
+                  className="text-background/80 hover:text-background transition-colors"
+                >
+                  {t("header.help")}
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -36,10 +72,38 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">{t("footer.resources")}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Blog</a></li>
-              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Study Tips</a></li>
-              <li><a href="#" className="text-background/80 hover:text-background transition-colors">FAQ</a></li>
-              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Privacy Policy</a></li>
+              <li>
+                <a
+                  href="#"
+                  className="text-background/80 hover:text-background transition-colors"
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-background/80 hover:text-background transition-colors"
+                >
+                  Study Tips
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-background/80 hover:text-background transition-colors"
+                >
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-background/80 hover:text-background transition-colors"
+                >
+                  Privacy Policy
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -79,16 +143,32 @@ export default function Footer() {
               {t("footer.copyright")}
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-background/80 hover:text-background transition-colors" aria-label="Facebook">
+              <a
+                href="#"
+                className="text-background/80 hover:text-background transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-background/80 hover:text-background transition-colors" aria-label="Twitter">
+              <a
+                href="#"
+                className="text-background/80 hover:text-background transition-colors"
+                aria-label="Twitter"
+              >
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-background/80 hover:text-background transition-colors" aria-label="Instagram">
+              <a
+                href="#"
+                className="text-background/80 hover:text-background transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-background/80 hover:text-background transition-colors" aria-label="LinkedIn">
+              <a
+                href="#"
+                className="text-background/80 hover:text-background transition-colors"
+                aria-label="LinkedIn"
+              >
                 <Linkedin size={20} />
               </a>
             </div>

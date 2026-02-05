@@ -11,41 +11,49 @@ const Placeholder = () => {
   const pageContent: Record<string, { title: string; description: string }> = {
     dashboard: {
       title: "Your Learning Dashboard",
-      description: "Track your progress, view credit scores, and manage your study materials all in one place."
+      description:
+        "Track your progress, view credit scores, and manage your study materials all in one place.",
     },
     "my-tasks": {
       title: "My Study Tasks",
-      description: "Organize your study schedule with smart task management and personalized reminders."
+      description:
+        "Organize your study schedule with smart task management and personalized reminders.",
     },
     "ai-help": {
       title: "AI Study Assistant",
-      description: "Get instant, AI-powered explanations for complex concepts anytime, anywhere."
+      description:
+        "Get instant, AI-powered explanations for complex concepts anytime, anywhere.",
     },
     "download-notes": {
       title: "Download Study Materials",
-      description: "Download your favorite notes in PDF, DOCX, or image formats for offline access."
+      description:
+        "Download your favorite notes in PDF, DOCX, or image formats for offline access.",
     },
     "my-achievements": {
       title: "Your Achievements",
-      description: "View your credit score, badges, and celebrate your learning milestones."
+      description:
+        "View your credit score, badges, and celebrate your learning milestones.",
     },
     "help-center": {
       title: "Help & Support",
-      description: "Get answers to your questions and find helpful guides for using NotesHub."
+      description:
+        "Get answers to your questions and find helpful guides for using NotesHub.",
     },
     streams: {
       title: "Browse All Streams",
-      description: "Explore comprehensive study materials for JEE, NEET, CA, and IIT/NIT courses."
+      description:
+        "Explore comprehensive study materials for JEE, NEET, CA, and IIT/NIT courses.",
     },
     features: {
       title: "All Features",
-      description: "Discover the complete set of tools and features available to enhance your learning."
-    }
+      description:
+        "Discover the complete set of tools and features available to enhance your learning.",
+    },
   };
 
   const content = pageContent[page || "dashboard"] || {
     title: t("placeholder.featureComingSoon"),
-    description: t("placeholder.inDevelopment")
+    description: t("placeholder.inDevelopment"),
   };
 
   return (
@@ -58,8 +66,12 @@ const Placeholder = () => {
             <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <span className="text-4xl">📝</span>
             </div>
-            <h1 className="text-4xl font-bold text-foreground mb-4">{content.title}</h1>
-            <p className="text-lg text-muted-foreground mb-8">{content.description}</p>
+            <h1 className="text-4xl font-bold text-foreground mb-4">
+              {content.title}
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8">
+              {content.description}
+            </p>
           </div>
 
           <div className="bg-card rounded-lg border border-border p-8 mb-8">

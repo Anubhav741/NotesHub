@@ -22,7 +22,9 @@ const NotFound = () => {
       <div className="flex-1 flex items-center justify-center px-4 py-20">
         <div className="text-center max-w-md">
           <h1 className="text-6xl font-bold text-primary mb-4">404</h1>
-          <p className="text-2xl font-bold text-foreground mb-2">{t("notFound.title")}</p>
+          <p className="text-2xl font-bold text-foreground mb-2">
+            {t("notFound.title")}
+          </p>
           <p className="text-muted-foreground text-lg mb-8">
             {t("notFound.description")}
           </p>

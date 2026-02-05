@@ -1,7 +1,18 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/hooks/useLanguage";
-import { Trophy, Download, CheckCircle, Sparkles, BookOpen, Users, ArrowRight, Star, Zap, Upload } from "lucide-react";
+import {
+  Trophy,
+  Download,
+  CheckCircle,
+  Sparkles,
+  BookOpen,
+  Users,
+  ArrowRight,
+  Star,
+  Zap,
+  Upload,
+} from "lucide-react";
 
 export default function Index() {
   const { t } = useLanguage();
@@ -23,7 +34,9 @@ export default function Index() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 {t("hero.title").split(" & ").length > 1 ? (
                   <>
-                    Your <span className="text-primary">Complete Study Hub</span> for Board & Competitive Exams
+                    Your{" "}
+                    <span className="text-primary">Complete Study Hub</span> for
+                    Board & Competitive Exams
                   </>
                 ) : (
                   t("hero.title")
@@ -57,27 +70,46 @@ export default function Index() {
           {/* Hero Stats */}
           <div className="grid grid-cols-3 gap-4 mt-16 max-w-2xl mx-auto">
             <div className="text-center p-4 bg-card rounded-lg border border-border">
-              <div className="text-2xl sm:text-3xl font-bold text-primary mb-1">10K+</div>
-              <div className="text-sm text-muted-foreground">{t("hero.materials")}</div>
+              <div className="text-2xl sm:text-3xl font-bold text-primary mb-1">
+                10K+
+              </div>
+              <div className="text-sm text-muted-foreground">
+                {t("hero.materials")}
+              </div>
             </div>
             <div className="text-center p-4 bg-card rounded-lg border border-border">
-              <div className="text-2xl sm:text-3xl font-bold text-secondary mb-1">50K+</div>
-              <div className="text-sm text-muted-foreground">{t("hero.students")}</div>
+              <div className="text-2xl sm:text-3xl font-bold text-secondary mb-1">
+                50K+
+              </div>
+              <div className="text-sm text-muted-foreground">
+                {t("hero.students")}
+              </div>
             </div>
             <div className="text-center p-4 bg-card rounded-lg border border-border">
-              <div className="text-2xl sm:text-3xl font-bold text-accent mb-1">95%</div>
-              <div className="text-sm text-muted-foreground">{t("hero.successRate")}</div>
+              <div className="text-2xl sm:text-3xl font-bold text-accent mb-1">
+                95%
+              </div>
+              <div className="text-sm text-muted-foreground">
+                {t("hero.successRate")}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Streams Section */}
-      <section id="streams" className="py-20 px-4 sm:px-6 lg:px-8 bg-card border-y border-border">
+      <section
+        id="streams"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-card border-y border-border"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">{t("streams.title")}</h2>
-            <p className="text-lg text-muted-foreground">{t("streams.subtitle")}</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              {t("streams.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              {t("streams.subtitle")}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -91,8 +123,12 @@ export default function Index() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <Zap className="text-primary" size={24} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{t("streams.jee")}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{t("streams.jeeDesc")}</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">
+                {t("streams.jee")}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                {t("streams.jeeDesc")}
+              </p>
               <div className="flex items-center text-primary font-semibold text-sm hover:gap-2 transition-all">
                 {t("streams.explore")} <ArrowRight size={16} />
               </div>
@@ -108,8 +144,12 @@ export default function Index() {
               <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
                 <BookOpen className="text-secondary" size={24} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{t("streams.neet")}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{t("streams.neetDesc")}</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">
+                {t("streams.neet")}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                {t("streams.neetDesc")}
+              </p>
               <div className="flex items-center text-secondary font-semibold text-sm hover:gap-2 transition-all">
                 {t("streams.explore")} <ArrowRight size={16} />
               </div>
@@ -125,8 +165,12 @@ export default function Index() {
               <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
                 <Trophy className="text-accent" size={24} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{t("streams.ca")}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{t("streams.caDesc")}</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">
+                {t("streams.ca")}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                {t("streams.caDesc")}
+              </p>
               <div className="flex items-center text-accent font-semibold text-sm hover:gap-2 transition-all">
                 {t("streams.explore")} <ArrowRight size={16} />
               </div>
@@ -142,8 +186,12 @@ export default function Index() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <Users className="text-primary" size={24} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{t("streams.iitNit")}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{t("streams.iitNitDesc")}</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">
+                {t("streams.iitNit")}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                {t("streams.iitNitDesc")}
+              </p>
               <div className="flex items-center text-primary font-semibold text-sm hover:gap-2 transition-all">
                 {t("streams.explore")} <ArrowRight size={16} />
               </div>
@@ -156,8 +204,12 @@ export default function Index() {
       <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">{t("features.title")}</h2>
-            <p className="text-lg text-muted-foreground">{t("features.subtitle")}</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              {t("features.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              {t("features.subtitle")}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -166,8 +218,12 @@ export default function Index() {
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Trophy className="text-primary" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{t("features.creditScore")}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{t("features.creditScoreDesc")}</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">
+                {t("features.creditScore")}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                {t("features.creditScoreDesc")}
+              </p>
               <div className="flex items-center gap-2 text-primary text-sm font-semibold">
                 <Star size={16} /> {t("features.creditScore")}
               </div>
@@ -178,8 +234,12 @@ export default function Index() {
               <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
                 <CheckCircle className="text-secondary" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{t("features.tasks")}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{t("features.tasksDesc")}</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">
+                {t("features.tasks")}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                {t("features.tasksDesc")}
+              </p>
               <div className="flex items-center gap-2 text-secondary text-sm font-semibold">
                 <Zap size={16} /> {t("features.tasks")}
               </div>
@@ -190,8 +250,12 @@ export default function Index() {
               <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                 <Sparkles className="text-accent" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{t("features.aiExplanation")}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{t("features.aiDesc")}</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">
+                {t("features.aiExplanation")}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                {t("features.aiDesc")}
+              </p>
               <div className="flex items-center gap-2 text-accent text-sm font-semibold">
                 <Sparkles size={16} /> {t("features.aiExplanation")}
               </div>
@@ -202,8 +266,12 @@ export default function Index() {
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Download className="text-primary" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{t("features.downloadNotes")}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{t("features.downloadDesc")}</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">
+                {t("features.downloadNotes")}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                {t("features.downloadDesc")}
+              </p>
               <div className="flex items-center gap-2 text-primary text-sm font-semibold">
                 <Download size={16} /> {t("features.downloadNotes")}
               </div>
@@ -214,8 +282,12 @@ export default function Index() {
               <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
                 <CheckCircle className="text-secondary" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{t("features.markComplete")}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{t("features.markDesc")}</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">
+                {t("features.markComplete")}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                {t("features.markDesc")}
+              </p>
               <div className="flex items-center gap-2 text-secondary text-sm font-semibold">
                 <CheckCircle size={16} /> {t("features.markComplete")}
               </div>
@@ -226,8 +298,12 @@ export default function Index() {
               <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                 <Users className="text-accent" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{t("features.multiLang")}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{t("features.multiLangDesc")}</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">
+                {t("features.multiLang")}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                {t("features.multiLangDesc")}
+              </p>
               <div className="flex items-center gap-2 text-accent text-sm font-semibold">
                 <Users size={16} /> {t("features.multiLang")}
               </div>
@@ -242,8 +318,12 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">{t("upload.title")}</h2>
-              <p className="text-lg text-muted-foreground mb-8">{t("upload.subtitle")}</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+                {t("upload.title")}
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                {t("upload.subtitle")}
+              </p>
 
               <div className="space-y-6 mb-8">
                 <div className="flex gap-4">
@@ -251,8 +331,12 @@ export default function Index() {
                     <Upload className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground mb-1">{t("upload.uploadNotes")}</h3>
-                    <p className="text-muted-foreground text-sm">{t("upload.uploadDesc")}</p>
+                    <h3 className="font-bold text-foreground mb-1">
+                      {t("upload.uploadNotes")}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {t("upload.uploadDesc")}
+                    </p>
                   </div>
                 </div>
 
@@ -261,8 +345,12 @@ export default function Index() {
                     <Trophy className="text-secondary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground mb-1">{t("upload.earnCredits")}</h3>
-                    <p className="text-muted-foreground text-sm">{t("upload.earnCreditsDesc")}</p>
+                    <h3 className="font-bold text-foreground mb-1">
+                      {t("upload.earnCredits")}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {t("upload.earnCreditsDesc")}
+                    </p>
                   </div>
                 </div>
 
@@ -271,8 +359,12 @@ export default function Index() {
                     <Star className="text-accent" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground mb-1">{t("upload.getVerified")}</h3>
-                    <p className="text-muted-foreground text-sm">{t("upload.getVerifiedDesc")}</p>
+                    <h3 className="font-bold text-foreground mb-1">
+                      {t("upload.getVerified")}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {t("upload.getVerifiedDesc")}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -292,15 +384,21 @@ export default function Index() {
               />
 
               <div className="bg-card rounded-lg p-8 border border-border">
-                <h3 className="text-2xl font-bold text-foreground mb-6">{t("upload.howItWorks")}</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">
+                  {t("upload.howItWorks")}
+                </h3>
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 font-bold">
                       1
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">{t("upload.step1")}</h4>
-                      <p className="text-muted-foreground text-sm">{t("upload.step1Desc")}</p>
+                      <h4 className="font-semibold text-foreground">
+                        {t("upload.step1")}
+                      </h4>
+                      <p className="text-muted-foreground text-sm">
+                        {t("upload.step1Desc")}
+                      </p>
                     </div>
                   </div>
 
@@ -309,8 +407,12 @@ export default function Index() {
                       2
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">{t("upload.step2")}</h4>
-                      <p className="text-muted-foreground text-sm">{t("upload.step2Desc")}</p>
+                      <h4 className="font-semibold text-foreground">
+                        {t("upload.step2")}
+                      </h4>
+                      <p className="text-muted-foreground text-sm">
+                        {t("upload.step2Desc")}
+                      </p>
                     </div>
                   </div>
 
@@ -319,8 +421,12 @@ export default function Index() {
                       3
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">{t("upload.step3")}</h4>
-                      <p className="text-muted-foreground text-sm">{t("upload.step3Desc")}</p>
+                      <h4 className="font-semibold text-foreground">
+                        {t("upload.step3")}
+                      </h4>
+                      <p className="text-muted-foreground text-sm">
+                        {t("upload.step3Desc")}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -333,8 +439,12 @@ export default function Index() {
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card border-y border-border">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">{t("cta.title")}</h2>
-          <p className="text-lg text-muted-foreground mb-8">{t("cta.subtitle")}</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            {t("cta.title")}
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            {t("cta.subtitle")}
+          </p>
           <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-4 rounded-lg transition-colors inline-flex items-center gap-2">
             {t("cta.getStarted")}
             <ArrowRight size={20} />
@@ -346,7 +456,9 @@ export default function Index() {
       <section id="help" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">{t("faq.title")}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              {t("faq.title")}
+            </h2>
             <p className="text-lg text-muted-foreground">{t("faq.subtitle")}</p>
           </div>
 
@@ -359,8 +471,13 @@ export default function Index() {
               { q: "faq.q5", a: "faq.a5" },
               { q: "faq.q6", a: "faq.a6" },
             ].map((item, idx) => (
-              <div key={idx} className="bg-card rounded-lg p-6 border border-border">
-                <h3 className="font-semibold text-foreground mb-2">{t(item.q)}</h3>
+              <div
+                key={idx}
+                className="bg-card rounded-lg p-6 border border-border"
+              >
+                <h3 className="font-semibold text-foreground mb-2">
+                  {t(item.q)}
+                </h3>
                 <p className="text-muted-foreground text-sm">{t(item.a)}</p>
               </div>
             ))}
