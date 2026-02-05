@@ -158,8 +158,8 @@ export default function Index() {
             {/* CA Stream */}
             <div className="bg-background rounded-lg p-6 border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
               <img
-                src="https://images.pexels.com/photos/6693857/pexels-photo-6693857.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="CA"
+                src="https://images.pexels.com/photos/33904722/pexels-photo-33904722.jpeg"
+                alt="Student reading books in library"
                 className="w-full h-40 object-cover rounded-lg mb-4"
               />
               <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
