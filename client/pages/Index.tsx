@@ -179,8 +179,8 @@ export default function Index() {
             {/* IIT/NIT Stream */}
             <div className="bg-background rounded-lg p-6 border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
               <img
-                src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="IIT/NIT"
+                src="https://images.pexels.com/photos/7972949/pexels-photo-7972949.jpeg"
+                alt="College students studying together"
                 className="w-full h-40 object-cover rounded-lg mb-4"
               />
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
