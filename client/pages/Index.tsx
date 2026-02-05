@@ -137,8 +137,8 @@ export default function Index() {
             {/* NEET Stream */}
             <div className="bg-background rounded-lg p-6 border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
               <img
-                src="https://images.pexels.com/photos/5632403/pexels-photo-5632403.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="NEET"
+                src="https://images.pexels.com/photos/5212687/pexels-photo-5212687.jpeg"
+                alt="Students studying together"
                 className="w-full h-40 object-cover rounded-lg mb-4"
               />
               <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
