@@ -53,11 +53,17 @@ export default function Index() {
                 {t("hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                <button
+                  onClick={() => setIsUploadModalOpen(true)}
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 hover:shadow-lg transform hover:scale-105"
+                >
                   {t("hero.startLearning")}
                   <ArrowRight size={20} />
                 </button>
-                <button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-3 rounded-lg transition-colors">
+                <button
+                  onClick={() => document.getElementById("streams")?.scrollIntoView({ behavior: "smooth" })}
+                  className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-3 rounded-lg transition-colors hover:shadow-lg transform hover:scale-105"
+                >
                   {t("hero.exploreStreams")}
                 </button>
               </div>
