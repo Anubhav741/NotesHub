@@ -182,7 +182,13 @@ export default function Index() {
             </button>
 
             {/* CA Stream */}
-            <div className="bg-background rounded-lg p-6 border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+            <button
+              onClick={() => {
+                setActiveStream("ca");
+                document.getElementById("notes-gallery")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="bg-background rounded-lg p-6 border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300 cursor-pointer group text-left w-full transform hover:scale-105"
+            >
               <img
                 src="https://images.pexels.com/photos/33904722/pexels-photo-33904722.jpeg"
                 alt="Student reading books in library"
@@ -200,10 +206,16 @@ export default function Index() {
               <div className="flex items-center text-accent font-semibold text-sm hover:gap-2 transition-all">
                 {t("streams.explore")} <ArrowRight size={16} />
               </div>
-            </div>
+            </button>
 
             {/* IIT/NIT Stream */}
-            <div className="bg-background rounded-lg p-6 border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+            <button
+              onClick={() => {
+                setActiveStream("iit-nit");
+                document.getElementById("notes-gallery")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="bg-background rounded-lg p-6 border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group text-left w-full transform hover:scale-105"
+            >
               <img
                 src="https://images.pexels.com/photos/7972949/pexels-photo-7972949.jpeg"
                 alt="College students studying together"
@@ -221,7 +233,7 @@ export default function Index() {
               <div className="flex items-center text-primary font-semibold text-sm hover:gap-2 transition-all">
                 {t("streams.explore")} <ArrowRight size={16} />
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </section>
