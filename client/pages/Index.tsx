@@ -1,6 +1,10 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import UploadModal from "@/components/UploadModal";
+import NotesGallery from "@/components/NotesGallery";
 import { useLanguage } from "@/hooks/useLanguage";
+import { useNotes } from "@/context/NotesContext";
 import {
   Trophy,
   Download,
@@ -16,6 +20,9 @@ import {
 
 export default function Index() {
   const { t } = useLanguage();
+  const { getUserCredits } = useNotes();
+  const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
+  const [activeStream, setActiveStream] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-background">
