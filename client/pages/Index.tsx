@@ -461,7 +461,10 @@ export default function Index() {
           <p className="text-lg text-muted-foreground mb-8">
             {t("cta.subtitle")}
           </p>
-          <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-4 rounded-lg transition-colors inline-flex items-center gap-2">
+          <button
+            onClick={() => setIsUploadModalOpen(true)}
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-4 rounded-lg transition-colors inline-flex items-center gap-2 hover:shadow-lg transform hover:scale-105"
+          >
             {t("cta.getStarted")}
             <ArrowRight size={20} />
           </button>
