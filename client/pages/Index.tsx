@@ -478,15 +478,26 @@ export default function Index() {
       </section>
 
       {/* Notes Gallery Section */}
-      <section id="notes-gallery" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="notes-gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              📚 Community Notes
+              📚 Complete Notes Library
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Download notes uploaded by students like you. Learn, share, and earn credits!
+            <p className="text-lg text-muted-foreground mb-8">
+              Access thousands of quality notes across all streams and subjects. Search, filter, and read online instantly!
             </p>
+
+            {/* CTA Button to Full Library */}
+            <div className="mb-12">
+              <a
+                href="/notes"
+                className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-4 rounded-lg transition-colors hover:shadow-lg transform hover:scale-105"
+              >
+                🚀 Explore Full Notes Library
+                <ArrowRight size={20} />
+              </a>
+            </div>
 
             {/* Stream Filter Buttons */}
             <div className="flex flex-wrap justify-center gap-3 mb-8">
