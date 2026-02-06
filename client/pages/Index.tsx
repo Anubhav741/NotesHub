@@ -453,6 +453,50 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Notes Gallery Section */}
+      <section id="notes-gallery" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              📚 Community Notes
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Download notes uploaded by students like you. Learn, share, and earn credits!
+            </p>
+
+            {/* Stream Filter Buttons */}
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              <button
+                onClick={() => setActiveStream(null)}
+                className={`px-6 py-2 rounded-lg font-semibold transition-all transform hover:scale-105 ${
+                  activeStream === null
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "bg-muted text-foreground hover:bg-primary/20"
+                }`}
+              >
+                All Streams
+              </button>
+              {["jee", "neet", "ca", "iit-nit"].map((stream) => (
+                <button
+                  key={stream}
+                  onClick={() => setActiveStream(stream)}
+                  className={`px-6 py-2 rounded-lg font-semibold transition-all transform hover:scale-105 ${
+                    activeStream === stream
+                      ? "bg-secondary text-secondary-foreground shadow-lg"
+                      : "bg-muted text-foreground hover:bg-secondary/20"
+                  }`}
+                >
+                  {stream.toUpperCase()}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Notes Gallery */}
+          <NotesGallery filter={activeStream || undefined} />
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card border-y border-border">
         <div className="max-w-4xl mx-auto text-center">
