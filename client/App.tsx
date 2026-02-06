@@ -10,6 +10,7 @@ import { NotesProvider } from "./context/NotesContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Placeholder from "./pages/Placeholder";
+import NotesHubPage from "./pages/NotesHubPage";
 
 const queryClient = new QueryClient();
 
