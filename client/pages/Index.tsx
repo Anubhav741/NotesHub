@@ -128,7 +128,13 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* JEE Stream */}
-            <div className="bg-background rounded-lg p-6 border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+            <button
+              onClick={() => {
+                setActiveStream("jee");
+                document.getElementById("notes-gallery")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="bg-background rounded-lg p-6 border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group text-left w-full transform hover:scale-105"
+            >
               <img
                 src="https://images.pexels.com/photos/8471839/pexels-photo-8471839.jpeg"
                 alt="Science laboratory students"
@@ -146,10 +152,16 @@ export default function Index() {
               <div className="flex items-center text-primary font-semibold text-sm hover:gap-2 transition-all">
                 {t("streams.explore")} <ArrowRight size={16} />
               </div>
-            </div>
+            </button>
 
             {/* NEET Stream */}
-            <div className="bg-background rounded-lg p-6 border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+            <button
+              onClick={() => {
+                setActiveStream("neet");
+                document.getElementById("notes-gallery")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="bg-background rounded-lg p-6 border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group text-left w-full transform hover:scale-105"
+            >
               <img
                 src="https://images.pexels.com/photos/5212687/pexels-photo-5212687.jpeg"
                 alt="Students studying together"
@@ -167,7 +179,7 @@ export default function Index() {
               <div className="flex items-center text-secondary font-semibold text-sm hover:gap-2 transition-all">
                 {t("streams.explore")} <ArrowRight size={16} />
               </div>
-            </div>
+            </button>
 
             {/* CA Stream */}
             <div className="bg-background rounded-lg p-6 border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
