@@ -27,6 +27,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <UploadModal isOpen={isUploadModalOpen} onClose={() => setIsUploadModalOpen(false)} />
 
       {/* Hero Section */}
       <section className="relative py-20 sm:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
