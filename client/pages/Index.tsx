@@ -382,7 +382,10 @@ export default function Index() {
                 </div>
               </div>
 
-              <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-colors flex items-center gap-2">
+              <button
+                onClick={() => setIsUploadModalOpen(true)}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-colors flex items-center gap-2 hover:shadow-lg transform hover:scale-105"
+              >
                 {t("upload.startUploading")}
                 <ArrowRight size={20} />
               </button>
