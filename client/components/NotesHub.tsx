@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { Search, Filter, BookMarked, Download, Eye, Star, X } from "lucide-react";
+import { Search, Filter, BookMarked, Download, Eye, Star, X, ChevronLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import NoteReader from "./NoteReader";
 import { notesDatabase, searchNotes, NoteContent } from "@/data/notesDatabase";
 
 export default function NotesHub() {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedNote, setSelectedNote] = useState<NoteContent | null>(null);
   const [isReaderOpen, setIsReaderOpen] = useState(false);
@@ -52,8 +54,15 @@ export default function NotesHub() {
       <NoteReader note={selectedNote} isOpen={isReaderOpen} onClose={() => setIsReaderOpen(false)} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* Back Button & Header */}
         <div className="mb-8">
+          <button
+            onClick={() => navigate("/")}
+            className="flex items-center gap-2 text-primary hover:text-primary/80 font-semibold mb-4 transition-colors"
+          >
+            <ChevronLeft size={20} />
+            Back to Home
+          </button>
           <h1 className="text-4xl font-bold text-foreground mb-2">📚 Complete Notes Library</h1>
           <p className="text-lg text-muted-foreground">
             Access thousands of quality notes across all streams and subjects
