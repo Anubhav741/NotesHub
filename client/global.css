@@ -118,3 +118,141 @@
     white-space: pre;
   }
 }
+
+/* Dark Reading Mode Styles */
+.prose-dark-reading {
+  color: #e4e4e7;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+
+.prose-dark-reading h1,
+.prose-dark-reading h2,
+.prose-dark-reading h3,
+.prose-dark-reading h4,
+.prose-dark-reading h5,
+.prose-dark-reading h6 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose-dark-reading h1 {
+  font-size: 1.875em;
+}
+
+.prose-dark-reading h2 {
+  font-size: 1.5em;
+  border-bottom: 2px solid #3f3f46;
+  padding-bottom: 0.5em;
+}
+
+.prose-dark-reading h3 {
+  font-size: 1.25em;
+}
+
+.prose-dark-reading p {
+  color: #e4e4e7;
+  margin-bottom: 1.25em;
+}
+
+.prose-dark-reading ul,
+.prose-dark-reading ol {
+  color: #e4e4e7;
+  margin-left: 1.5em;
+  margin-bottom: 1.25em;
+}
+
+.prose-dark-reading li {
+  color: #e4e4e7;
+  margin-bottom: 0.5em;
+  list-style-position: outside;
+}
+
+.prose-dark-reading a {
+  color: #60a5fa;
+  text-decoration: underline;
+  text-decoration-color: rgba(96, 165, 250, 0.5);
+}
+
+.prose-dark-reading a:hover {
+  color: #93c5fd;
+}
+
+.prose-dark-reading blockquote {
+  color: #d4d4d8;
+  border-left: 4px solid #3b82f6;
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 1.25em;
+  font-style: italic;
+  background-color: rgba(59, 130, 246, 0.05);
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.prose-dark-reading code {
+  color: #fbbf24;
+  background-color: #1f2937;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.9em;
+}
+
+.prose-dark-reading pre {
+  background-color: #1f2937;
+  color: #e4e4e7;
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+  margin-bottom: 1.25em;
+  border: 1px solid #374151;
+}
+
+.prose-dark-reading pre code {
+  color: #e4e4e7;
+  background-color: transparent;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+.prose-dark-reading table {
+  width: 100%;
+  margin-bottom: 1.25em;
+  border-collapse: collapse;
+}
+
+.prose-dark-reading table th,
+.prose-dark-reading table td {
+  border: 1px solid #374151;
+  padding: 0.75em;
+  text-align: left;
+  color: #e4e4e7;
+}
+
+.prose-dark-reading table th {
+  background-color: #1f2937;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.prose-dark-reading table tr:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.prose-dark-reading strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.prose-dark-reading em {
+  color: #d4d4d8;
+  font-style: italic;
+}
+
+.prose-dark-reading hr {
+  border-color: #374151;
+  margin: 1.5em 0;
+}
