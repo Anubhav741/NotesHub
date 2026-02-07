@@ -1,5 +1,14 @@
 import { useState } from "react";
-import { Search, Filter, BookMarked, Download, Eye, Star, X, ChevronLeft } from "lucide-react";
+import {
+  Search,
+  Filter,
+  BookMarked,
+  Download,
+  Eye,
+  Star,
+  X,
+  ChevronLeft,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import NoteReader from "./NoteReader";
 import { notesDatabase, searchNotes, NoteContent } from "@/data/notesDatabase";
@@ -11,7 +20,9 @@ export default function NotesHub() {
   const [isReaderOpen, setIsReaderOpen] = useState(false);
   const [selectedStream, setSelectedStream] = useState<string | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
-  const [sortBy, setSortBy] = useState<"latest" | "popular" | "rating">("latest");
+  const [sortBy, setSortBy] = useState<"latest" | "popular" | "rating">(
+    "latest",
+  );
   const [difficultyFilter, setDifficultyFilter] = useState<string | null>(null);
 
   // Get filtered and searched notes
@@ -26,7 +37,9 @@ export default function NotesHub() {
   }
 
   if (difficultyFilter) {
-    filteredNotes = filteredNotes.filter((n) => n.difficulty === difficultyFilter);
+    filteredNotes = filteredNotes.filter(
+      (n) => n.difficulty === difficultyFilter,
+    );
   }
 
   // Sort notes
@@ -35,12 +48,21 @@ export default function NotesHub() {
   } else if (sortBy === "rating") {
     filteredNotes.sort((a, b) => b.rating - a.rating);
   } else {
-    filteredNotes.sort((a, b) => new Date(b.uploadDate).getTime() - new Date(a.uploadDate).getTime());
+    filteredNotes.sort(
+      (a, b) =>
+        new Date(b.uploadDate).getTime() - new Date(a.uploadDate).getTime(),
+    );
   }
 
   // Get unique subjects for selected stream
   const uniqueSubjects = selectedStream
-    ? [...new Set(notesDatabase.filter((n) => n.stream === selectedStream).map((n) => n.subject))]
+    ? [
+        ...new Set(
+          notesDatabase
+            .filter((n) => n.stream === selectedStream)
+            .map((n) => n.subject),
+        ),
+      ]
     : [];
 
   const openNote = (note: NoteContent) => {
@@ -51,7 +73,11 @@ export default function NotesHub() {
   return (
     <div className="min-h-screen bg-background py-8">
       {/* Note Reader Modal */}
-      <NoteReader note={selectedNote} isOpen={isReaderOpen} onClose={() => setIsReaderOpen(false)} />
+      <NoteReader
+        note={selectedNote}
+        isOpen={isReaderOpen}
+        onClose={() => setIsReaderOpen(false)}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button & Header */}
@@ -63,7 +89,9 @@ export default function NotesHub() {
             <ChevronLeft size={20} />
             Back to Home
           </button>
-          <h1 className="text-4xl font-bold text-foreground mb-2">📚 Complete Notes Library</h1>
+          <h1 className="text-4xl font-bold text-foreground mb-2">
+            📚 Complete Notes Library
+          </h1>
           <p className="text-lg text-muted-foreground">
             Access thousands of quality notes across all streams and subjects
           </p>
@@ -72,7 +100,10 @@ export default function NotesHub() {
         {/* Search Bar */}
         <div className="mb-8">
           <div className="relative">
-            <Search className="absolute left-4 top-3.5 text-muted-foreground" size={20} />
+            <Search
+              className="absolute left-4 top-3.5 text-muted-foreground"
+              size={20}
+            />
             <input
               type="text"
               placeholder="Search notes by title, subject, topic..."
@@ -87,7 +118,9 @@ export default function NotesHub() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           {/* Stream Filter */}
           <div>
-            <label className="block text-sm font-semibold text-foreground mb-2">Stream</label>
+            <label className="block text-sm font-semibold text-foreground mb-2">
+              Stream
+            </label>
             <select
               value={selectedStream || ""}
               onChange={(e) => {
@@ -106,7 +139,9 @@ export default function NotesHub() {
 
           {/* Subject Filter */}
           <div>
-            <label className="block text-sm font-semibold text-foreground mb-2">Subject</label>
+            <label className="block text-sm font-semibold text-foreground mb-2">
+              Subject
+            </label>
             <select
               value={selectedSubject || ""}
               onChange={(e) => setSelectedSubject(e.target.value || null)}
@@ -124,7 +159,9 @@ export default function NotesHub() {
 
           {/* Difficulty Filter */}
           <div>
-            <label className="block text-sm font-semibold text-foreground mb-2">Difficulty</label>
+            <label className="block text-sm font-semibold text-foreground mb-2">
+              Difficulty
+            </label>
             <select
               value={difficultyFilter || ""}
               onChange={(e) => setDifficultyFilter(e.target.value || null)}
@@ -139,7 +176,9 @@ export default function NotesHub() {
 
           {/* Sort */}
           <div>
-            <label className="block text-sm font-semibold text-foreground mb-2">Sort By</label>
+            <label className="block text-sm font-semibold text-foreground mb-2">
+              Sort By
+            </label>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
@@ -155,9 +194,13 @@ export default function NotesHub() {
         {/* Results Summary */}
         <div className="mb-6 flex justify-between items-center">
           <p className="text-muted-foreground">
-            Found <strong>{filteredNotes.length}</strong> {filteredNotes.length === 1 ? "note" : "notes"}
+            Found <strong>{filteredNotes.length}</strong>{" "}
+            {filteredNotes.length === 1 ? "note" : "notes"}
           </p>
-          {(selectedStream || selectedSubject || difficultyFilter || searchQuery) && (
+          {(selectedStream ||
+            selectedSubject ||
+            difficultyFilter ||
+            searchQuery) && (
             <button
               onClick={() => {
                 setSelectedStream(null);
@@ -201,16 +244,22 @@ export default function NotesHub() {
 
                 {/* Content */}
                 <div className="p-4 flex-1 flex flex-col">
-                  <p className="text-sm text-muted-foreground line-clamp-2 mb-3">{note.description}</p>
+                  <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+                    {note.description}
+                  </p>
 
                   <div className="space-y-2 mb-4 flex-1">
                     <div>
                       <p className="text-xs text-muted-foreground">Subject</p>
-                      <p className="text-sm font-semibold text-foreground">{note.subject}</p>
+                      <p className="text-sm font-semibold text-foreground">
+                        {note.subject}
+                      </p>
                     </div>
 
                     <div>
-                      <p className="text-xs text-muted-foreground">By {note.uploadedBy}</p>
+                      <p className="text-xs text-muted-foreground">
+                        By {note.uploadedBy}
+                      </p>
                       <p className="text-xs text-muted-foreground">
                         {note.uploadDate.toLocaleDateString()}
                       </p>
@@ -225,7 +274,9 @@ export default function NotesHub() {
                     </div>
                     <div className="flex items-center gap-1 text-yellow-500 text-sm">
                       <Star size={14} className="fill-current" />
-                      <span className="font-semibold">{note.rating.toFixed(1)}</span>
+                      <span className="font-semibold">
+                        {note.rating.toFixed(1)}
+                      </span>
                     </div>
                     <div className="flex items-center gap-1 text-secondary text-sm">
                       <Download size={14} />
@@ -236,7 +287,10 @@ export default function NotesHub() {
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1 mb-4">
                     {note.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">
+                      <span
+                        key={tag}
+                        className="text-xs bg-primary/10 text-primary px-2 py-1 rounded"
+                      >
                         #{tag}
                       </span>
                     ))}
@@ -253,7 +307,8 @@ export default function NotesHub() {
                             : "bg-red-500/20 text-red-700 dark:text-red-400"
                       }`}
                     >
-                      {note.difficulty.toUpperCase()} • {note.estimatedReadTime} min read
+                      {note.difficulty.toUpperCase()} • {note.estimatedReadTime}{" "}
+                      min read
                     </span>
                   </div>
                 </div>
@@ -276,8 +331,12 @@ export default function NotesHub() {
           </div>
         ) : (
           <div className="text-center py-16">
-            <p className="text-2xl font-bold text-foreground mb-2">No notes found</p>
-            <p className="text-muted-foreground mb-6">Try adjusting your filters or search query</p>
+            <p className="text-2xl font-bold text-foreground mb-2">
+              No notes found
+            </p>
+            <p className="text-muted-foreground mb-6">
+              Try adjusting your filters or search query
+            </p>
             <button
               onClick={() => {
                 setSelectedStream(null);

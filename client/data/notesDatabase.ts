@@ -29,7 +29,8 @@ export const notesDatabase: NoteContent[] = [
   {
     id: "jee-physics-1",
     title: "Complete Guide to Newton's Laws of Motion",
-    description: "Detailed comprehensive guide covering Newton's three laws of motion with real-world applications, problem-solving techniques, and advanced concepts for JEE preparation.",
+    description:
+      "Detailed comprehensive guide covering Newton's three laws of motion with real-world applications, problem-solving techniques, and advanced concepts for JEE preparation.",
     content: `
       <h2>Newton's Laws of Motion: Complete Study Guide</h2>
       <p>Newton's laws of motion form the foundation of classical mechanics. Understanding these three laws is essential for solving any mechanics problem in physics.</p>
@@ -127,7 +128,14 @@ export const notesDatabase: NoteContent[] = [
     verified: true,
     fileSize: "5.2 MB",
     difficulty: "medium",
-    tags: ["mechanics", "forces", "motion", "newton", "acceleration", "inertia"],
+    tags: [
+      "mechanics",
+      "forces",
+      "motion",
+      "newton",
+      "acceleration",
+      "inertia",
+    ],
     views: 7892,
     bookmarked: 1245,
     isPinned: true,
@@ -137,7 +145,8 @@ export const notesDatabase: NoteContent[] = [
   {
     id: "jee-chemistry-1",
     title: "Atomic Structure and Quantum Mechanics - Complete Notes",
-    description: "Comprehensive study material on quantum numbers, electron configuration, and periodic table trends with detailed explanations and numerical problems.",
+    description:
+      "Comprehensive study material on quantum numbers, electron configuration, and periodic table trends with detailed explanations and numerical problems.",
     content: `
       <h2>Atomic Structure and Quantum Mechanics</h2>
       <p>The modern atomic structure is based on quantum mechanical principles. This guide covers everything you need for JEE preparation.</p>
@@ -242,7 +251,13 @@ export const notesDatabase: NoteContent[] = [
     verified: true,
     fileSize: "6.1 MB",
     difficulty: "hard",
-    tags: ["atomic-structure", "quantum-numbers", "electrons", "orbitals", "periodic-table"],
+    tags: [
+      "atomic-structure",
+      "quantum-numbers",
+      "electrons",
+      "orbitals",
+      "periodic-table",
+    ],
     views: 8934,
     bookmarked: 1567,
     isPinned: true,
@@ -252,7 +267,8 @@ export const notesDatabase: NoteContent[] = [
   {
     id: "neet-biology-1",
     title: "Cell Structure and Functions - Detailed Study Material",
-    description: "Comprehensive notes on cell structure, organelles, their functions, and differences between prokaryotic and eukaryotic cells for NEET exam preparation.",
+    description:
+      "Comprehensive notes on cell structure, organelles, their functions, and differences between prokaryotic and eukaryotic cells for NEET exam preparation.",
     content: `
       <h2>Cell Structure and Functions</h2>
       <p>The cell is the basic unit of life. Understanding cell structure is fundamental to biology. This comprehensive guide covers both prokaryotic and eukaryotic cells.</p>
@@ -413,7 +429,13 @@ export const notesDatabase: NoteContent[] = [
     verified: true,
     fileSize: "7.3 MB",
     difficulty: "medium",
-    tags: ["cell-biology", "organelles", "cell-structure", "prokaryotic", "eukaryotic"],
+    tags: [
+      "cell-biology",
+      "organelles",
+      "cell-structure",
+      "prokaryotic",
+      "eukaryotic",
+    ],
     views: 9876,
     bookmarked: 1892,
     isPinned: true,
@@ -423,7 +445,8 @@ export const notesDatabase: NoteContent[] = [
   {
     id: "ca-accounts-1",
     title: "Company Law: Formation and Management of Companies",
-    description: "Detailed study material on company formation, constitutional documents, and company management principles required for CA examination.",
+    description:
+      "Detailed study material on company formation, constitutional documents, and company management principles required for CA examination.",
     content: `
       <h2>Company Law: Formation and Management of Companies</h2>
       <p>Company law forms the legal framework for corporate governance. This comprehensive guide covers company formation, constitutional documents, and management principles.</p>
@@ -644,7 +667,14 @@ export const notesDatabase: NoteContent[] = [
     verified: true,
     fileSize: "8.9 MB",
     difficulty: "hard",
-    tags: ["company-law", "formation", "memorandum", "articles", "directors", "constitution"],
+    tags: [
+      "company-law",
+      "formation",
+      "memorandum",
+      "articles",
+      "directors",
+      "constitution",
+    ],
     views: 6234,
     bookmarked: 987,
     language: "en",
@@ -653,7 +683,8 @@ export const notesDatabase: NoteContent[] = [
   {
     id: "iit-nit-cs-1",
     title: "Data Structures: Arrays, Linked Lists, and Stacks - Complete Guide",
-    description: "Comprehensive study material covering fundamental data structures used in computer science with implementation details and practice problems.",
+    description:
+      "Comprehensive study material covering fundamental data structures used in computer science with implementation details and practice problems.",
     content: `
       <h2>Data Structures: Foundation of Computer Science</h2>
       <p>Data structures are the way we organize and store data for efficient access and modification. This guide covers the fundamental data structures needed for IIT/NIT entrance exams and programming interviews.</p>
@@ -920,7 +951,14 @@ export const notesDatabase: NoteContent[] = [
     verified: true,
     fileSize: "9.5 MB",
     difficulty: "hard",
-    tags: ["data-structures", "arrays", "linked-lists", "stacks", "queues", "algorithms"],
+    tags: [
+      "data-structures",
+      "arrays",
+      "linked-lists",
+      "stacks",
+      "queues",
+      "algorithms",
+    ],
     views: 8765,
     bookmarked: 1456,
     isPinned: true,
@@ -931,12 +969,13 @@ export const notesDatabase: NoteContent[] = [
 
 export const searchNotes = (query: string): NoteContent[] => {
   const q = query.toLowerCase();
-  return notesDatabase.filter((note) =>
-    note.title.toLowerCase().includes(q) ||
-    note.description.toLowerCase().includes(q) ||
-    note.tags.some((tag) => tag.toLowerCase().includes(q)) ||
-    note.subject.toLowerCase().includes(q) ||
-    note.uploadedBy.toLowerCase().includes(q)
+  return notesDatabase.filter(
+    (note) =>
+      note.title.toLowerCase().includes(q) ||
+      note.description.toLowerCase().includes(q) ||
+      note.tags.some((tag) => tag.toLowerCase().includes(q)) ||
+      note.subject.toLowerCase().includes(q) ||
+      note.uploadedBy.toLowerCase().includes(q),
   );
 };
 
@@ -944,6 +983,11 @@ export const getStreamNotes = (stream: string): NoteContent[] => {
   return notesDatabase.filter((note) => note.stream === stream);
 };
 
-export const getSubjectNotes = (stream: string, subject: string): NoteContent[] => {
-  return notesDatabase.filter((note) => note.stream === stream && note.subject === subject);
+export const getSubjectNotes = (
+  stream: string,
+  subject: string,
+): NoteContent[] => {
+  return notesDatabase.filter(
+    (note) => note.stream === stream && note.subject === subject,
+  );
 };

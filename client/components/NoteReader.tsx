@@ -26,7 +26,9 @@ export default function NoteReader({ note, isOpen, onClose }: NoteReaderProps) {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 overflow-y-auto">
-      <div className={`min-h-screen ${isDarkReading ? "bg-zinc-950" : "bg-white"}`}>
+      <div
+        className={`min-h-screen ${isDarkReading ? "bg-zinc-950" : "bg-white"}`}
+      >
         {/* Header */}
         <div
           className={`sticky top-0 z-10 border-b ${
@@ -74,9 +76,11 @@ export default function NoteReader({ note, isOpen, onClose }: NoteReaderProps) {
             </div>
 
             {/* Reading Progress */}
-            <div className={`mt-4 h-1 rounded-full overflow-hidden ${
-              isDarkReading ? "bg-zinc-800" : "bg-muted"
-            }`}>
+            <div
+              className={`mt-4 h-1 rounded-full overflow-hidden ${
+                isDarkReading ? "bg-zinc-800" : "bg-muted"
+              }`}
+            >
               <div
                 className="h-full bg-primary transition-all"
                 style={{ width: `${readingProgress}%` }}
@@ -106,7 +110,9 @@ export default function NoteReader({ note, isOpen, onClose }: NoteReaderProps) {
               >
                 A-
               </button>
-              <span className={`text-sm font-semibold min-w-12 text-center ${isDarkReading ? "text-white" : ""}`}>
+              <span
+                className={`text-sm font-semibold min-w-12 text-center ${isDarkReading ? "text-white" : ""}`}
+              >
                 {fontSize}px
               </span>
               <button
@@ -146,7 +152,10 @@ export default function NoteReader({ note, isOpen, onClose }: NoteReaderProps) {
                 }`}
                 title={isBookmarked ? "Remove bookmark" : "Add bookmark"}
               >
-                <Bookmark size={20} className={isBookmarked ? "fill-current" : ""} />
+                <Bookmark
+                  size={20}
+                  className={isBookmarked ? "fill-current" : ""}
+                />
               </button>
 
               <button
@@ -187,38 +196,54 @@ export default function NoteReader({ note, isOpen, onClose }: NoteReaderProps) {
             }`}
           >
             <div>
-              <p className={`text-sm font-medium ${isDarkReading ? "text-zinc-400" : "text-muted-foreground"}`}>
+              <p
+                className={`text-sm font-medium ${isDarkReading ? "text-zinc-400" : "text-muted-foreground"}`}
+              >
                 Downloads
               </p>
-              <p className={`text-2xl font-bold ${isDarkReading ? "text-white" : "text-foreground"}`}>
+              <p
+                className={`text-2xl font-bold ${isDarkReading ? "text-white" : "text-foreground"}`}
+              >
                 {note.downloads}
               </p>
             </div>
             <div>
-              <p className={`text-sm font-medium ${isDarkReading ? "text-zinc-400" : "text-muted-foreground"}`}>
+              <p
+                className={`text-sm font-medium ${isDarkReading ? "text-zinc-400" : "text-muted-foreground"}`}
+              >
                 Views
               </p>
-              <p className={`text-2xl font-bold ${isDarkReading ? "text-white" : "text-foreground"}`}>
+              <p
+                className={`text-2xl font-bold ${isDarkReading ? "text-white" : "text-foreground"}`}
+              >
                 {note.views}
               </p>
             </div>
             <div>
-              <p className={`text-sm font-medium ${isDarkReading ? "text-zinc-400" : "text-muted-foreground"}`}>
+              <p
+                className={`text-sm font-medium ${isDarkReading ? "text-zinc-400" : "text-muted-foreground"}`}
+              >
                 Credits
               </p>
-              <p className={`text-2xl font-bold text-secondary`}>+{note.credits}</p>
+              <p className={`text-2xl font-bold text-secondary`}>
+                +{note.credits}
+              </p>
             </div>
             <div>
-              <p className={`text-sm font-medium ${isDarkReading ? "text-zinc-400" : "text-muted-foreground"}`}>
+              <p
+                className={`text-sm font-medium ${isDarkReading ? "text-zinc-400" : "text-muted-foreground"}`}
+              >
                 Difficulty
               </p>
-              <p className={`text-2xl font-bold capitalize ${
-                note.difficulty === "easy"
-                  ? "text-green-400"
-                  : note.difficulty === "medium"
-                    ? "text-amber-400"
-                    : "text-red-400"
-              }`}>
+              <p
+                className={`text-2xl font-bold capitalize ${
+                  note.difficulty === "easy"
+                    ? "text-green-400"
+                    : note.difficulty === "medium"
+                      ? "text-amber-400"
+                      : "text-red-400"
+                }`}
+              >
                 {note.difficulty}
               </p>
             </div>
@@ -230,14 +255,16 @@ export default function NoteReader({ note, isOpen, onClose }: NoteReaderProps) {
             style={{
               fontSize: `${fontSize}px`,
               color: isDarkReading ? "#e4e4e7" : "inherit",
-              lineHeight: "1.8"
+              lineHeight: "1.8",
             }}
             dangerouslySetInnerHTML={{ __html: note.content }}
           ></article>
 
           {/* Tags */}
           <div className="mb-8">
-            <p className={`font-semibold mb-3 ${isDarkReading ? "text-white" : "text-foreground"}`}>
+            <p
+              className={`font-semibold mb-3 ${isDarkReading ? "text-white" : "text-foreground"}`}
+            >
               Topics:
             </p>
             <div className="flex flex-wrap gap-2">
@@ -262,7 +289,9 @@ export default function NoteReader({ note, isOpen, onClose }: NoteReaderProps) {
               isDarkReading ? "border-zinc-800" : "border-border"
             }`}
           >
-            <p className={`font-semibold mb-4 ${isDarkReading ? "text-white" : "text-foreground"}`}>
+            <p
+              className={`font-semibold mb-4 ${isDarkReading ? "text-white" : "text-foreground"}`}
+            >
               Was this helpful?
             </p>
             <div className="flex gap-3">
@@ -289,13 +318,22 @@ export default function NoteReader({ note, isOpen, onClose }: NoteReaderProps) {
           </div>
 
           {/* Author Info */}
-          <div className={`mt-8 p-6 rounded-lg ${isDarkReading ? "bg-zinc-900 border border-zinc-800" : "bg-card border border-border"}`}>
-            <h3 className={`font-bold mb-2 ${isDarkReading ? "text-white" : "text-foreground"}`}>
+          <div
+            className={`mt-8 p-6 rounded-lg ${isDarkReading ? "bg-zinc-900 border border-zinc-800" : "bg-card border border-border"}`}
+          >
+            <h3
+              className={`font-bold mb-2 ${isDarkReading ? "text-white" : "text-foreground"}`}
+            >
               About the Author
             </h3>
-            <p className={isDarkReading ? "text-zinc-300" : "text-muted-foreground"}>
-              <strong>{note.uploadedBy}</strong> is a verified educator with expertise in {note.subject}. They have
-              contributed {Math.floor(Math.random() * 50) + 10} notes to the community.
+            <p
+              className={
+                isDarkReading ? "text-zinc-300" : "text-muted-foreground"
+              }
+            >
+              <strong>{note.uploadedBy}</strong> is a verified educator with
+              expertise in {note.subject}. They have contributed{" "}
+              {Math.floor(Math.random() * 50) + 10} notes to the community.
             </p>
           </div>
         </div>
